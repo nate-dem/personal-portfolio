@@ -11,7 +11,7 @@ const Portfolio = () => {
             <div className="flex items-center">
               <span className="text-xl font-bold font-mono text-green-300">Nate Demchak</span>
             </div>
-            <div className="flex flex-1 items-center justify-end space-x-4">
+            <div className="flex flex-1 items-center font-mono justify-end space-x-4">
               <a href="#" className="text-green-300 hover:text-white transition-colors">About</a>
               <a href="#" className="text-green-300 hover:text-white transition-colors">Projects</a>
               <a href="#" className="text-green-300 hover:text-white transition-colors">Blog</a>
@@ -21,16 +21,16 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="hero" className="h-screen grid grid-cols-[70fr,30fr] grid-rows-[25fr,75fr] snap-start bg-gray-800 px-4">
+      {/* Landing Page */}
+      <section id="hero" className="h-screen grid grid-cols-[60fr,40fr] grid-rows-[20fr,70fr,10fr] snap-start bg-gray-800 px-4">
         <div></div>
         <div></div>
-        <div className="flex justify-center items-start p-8 md:p-10 lg:p-12">
+        <div className="flex justify-center items-start font-mono p-8 md:p-10 lg:p-12">
           <div>
             <p className="text-lg mb-4 text-gray-300">
               👋 Hi, My name is
             </p>
-            <h1 className="text-6xl md:text-8xl font-bold font-mono bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text mb-6">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text mb-6">
               Nate Demchak
             </h1>
             <p className="text-xl text-gray-300/90 mb-8 max-w-xl">
@@ -38,27 +38,49 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-        <div className='flex-cols items-center justify-center p-12 space-y-8'>
-          <h1 className='text-gray-300 text-4xl'>
-            Let's connect!
-          </h1>
-          <div>
-            <button className="bg-gradient-to-br from-green-400 to-cyan-500 text-white font-bold py-6 px-8 m-2 rounded-2xl">
-            <div className="flex space-x-6">
-              <a href="https://github.com/nate-dem" className="text-white/80 hover:text-white transition-colors">
-                <LuGithub size={28} />
-              </a>
-              <a href="https://www.linkedin.com/in/nathaniel-demchak-4340b326b/" className="text-white/80 hover:text-white transition-colors">
-                <LuLinkedin size={28} />
-              </a>
-              <a href="mailto:natedemchak35@gmail.com" className="text-white/80 hover:text-white transition-colors">
-                <LuMail size={28} />
-              </a>
-            
+        <div className='grid grid-rows-[40fr,60fr] items-center justify-center font-mono'>
+          <div className='p-6 space-y-8'>
+            <div>
+              <h1 className='text-gray-300 text-4xl'>
+                Let's connect!
+              </h1>
             </div>
-            </button>
+            <div>
+              <button className="bg-gradient-to-br from-green-400 to-cyan-500 text-white font-bold py-6 px-8 mx-10 rounded-2xl">
+              <div className="flex space-x-6">
+                <a href="https://github.com/nate-dem" className="text-white/80 hover:text-white transition-colors">
+                  <LuGithub size={28} />
+                </a>
+                <a href="https://www.linkedin.com/in/nathaniel-demchak-4340b326b/" className="text-white/80 hover:text-white transition-colors">
+                  <LuLinkedin size={28} />
+                </a>
+                <a href="mailto:natedemchak35@gmail.com" className="text-white/80 hover:text-white transition-colors">
+                  <LuMail size={28} />
+                </a>
+              
+              </div>
+              </button>
+            </div>
           </div>
-          
+        </div>
+        <div className='flex items-start justify-end px-6'>
+          <div className='transform -translate-x-1/2 animate-bounce'>
+            <h1 className='text-xl text-gray-300 font-bold font-mono group-hover:text-white transition-colors'>
+              Scroll Below ⬇️
+            </h1>
+          </div>
+        </div>
+      </section>
+      {/* About Me */}
+      <section id="about" className='h-screen snap-start bg-gray-800 '>
+        <div className='grid grid-rows-[30fr,70fr] grid-cols-[60fr,40fr] h-full'>
+          <div></div>
+          <div></div>
+          <div className='flex items-start justify-center'>
+            <h1 className='text-white text-2xl font-mono'>
+              About Me:
+            </h1>
+          </div>
         </div>
       </section>
     </div>
