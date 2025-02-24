@@ -1,27 +1,15 @@
 import React from 'react';
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import Navigation from '../components/Navigation';
 
 const Portfolio = () => {
   return (
     <div className="h-screen overflow-y-auto snap-y snap-mandatory">
-      {/* Navigation */}
-      <nav className="fixed w-full bg-gray-800/80 backdrop-blur-sm shadow-sm z-50 hidden lg:block">
-        <div className="max-w-full mx-4 px-6 sm:px-2 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <span className="text-xl font-bold font-mono bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text">Nate Demchak</span>
-            </div>
-            <div className="flex flex-1 items-center font-mono justify-end space-x-4">
-              <a href="" className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white">About</a>
-              <a href="#" className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white">Projects</a>
-              <a href="#" className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {/* Nav bar to move through portfolio */}
+      <Navigation />
 
       {/* Landing Page */}
-      <section id="hero" className="h-screen snap-start flex flex-col items-center bg-gray-800 px-4">
+      <section id="landingPage" className="h-screen snap-start flex flex-col items-center bg-gray-800 px-4">
         <div className="flex flex-col items-center justify-center flex-grow mt-40 space-y-8">
           <div className="text-center font-mono">
             <p className="text-lg mb-4 text-gray-300">
@@ -87,6 +75,22 @@ const Portfolio = () => {
               </p>
             </div>      
           </div>
+          <div className="flex items-start justify-center px-12 mt-20">
+            <div className="w-128 h-144 rounded-xl overflow-hidden">
+              <img 
+                src="../components/about_me_img.png" 
+                alt="Nate Demchak"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" className='h-screen snap-start'>
+        <div>
+          <h1>
+            hi
+          </h1>
         </div>
       </section>
     </div>
