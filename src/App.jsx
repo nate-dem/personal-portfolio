@@ -5,9 +5,7 @@ import Navigation from '../components/Navigation';
 const Portfolio = () => {
   return (
     <div className="h-screen overflow-y-auto snap-y snap-mandatory">
-      {/* Nav bar to move through portfolio */}
       <Navigation />
-
       {/* Landing Page */}
       <section id="landingPage" className="h-screen snap-start flex flex-col items-center bg-gray-800 px-4">
         <div className="flex flex-col items-center justify-center flex-grow mt-40 space-y-8">
@@ -86,12 +84,13 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      <section id="projects" className='h-screen snap-start'>
+      <section id="projects" className='h-screen snap-start bg-gray-800'>
         <div>
-          <h1>
-            hi
-          </h1>
+
         </div>
+      </section>
+      <section id="contact" className='h-screen snap-start bg-gray-800'>
+
       </section>
     </div>
   );
