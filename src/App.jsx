@@ -4,10 +4,12 @@ import Navigation from '../components/Navigation';
 
 const Portfolio = () => {
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-mandatory">
+    <div className="h-screen overflow-y-auto">
+      {/* Nav bar used for automatic scrolling */}
       <Navigation />
+
       {/* Landing Page */}
-      <section id="landingPage" className="h-screen snap-start flex flex-col items-center bg-gray-800 px-4">
+      <section id="landingPage" className="h-screen flex flex-col items-center bg-gray-800 px-4">
         <div className="flex flex-col items-center justify-center flex-grow mt-40 space-y-8">
           <div className="text-center font-mono">
             <p className="text-lg mb-4 text-gray-300">
@@ -50,7 +52,7 @@ const Portfolio = () => {
         </footer>
       </section>
       {/* About Me */}
-      <section id="about" className='h-screen snap-start bg-gray-800 '>
+      <section id="about" className='h-screen bg-gray-800 '>
         <div className='grid grid-rows-[20fr,80fr] grid-cols-[60fr,40fr] h-full'>
           <div></div>
           <div></div>
@@ -84,13 +86,13 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      <section id="projects" className='h-screen snap-start bg-gray-800'>
-        <div>
-
+      <section id="projects" className='h-screen bg-gray-800'>
+        <div className='grid grid-cols-[33fr,33fr,34fr] gap-4 h-full'>
+          <div className='flex justify-center items-start mt-40'>
+          </div>
+          <div></div>
+          <div></div>
         </div>
-      </section>
-      <section id="contact" className='h-screen snap-start bg-gray-800'>
-
       </section>
     </div>
   );
