@@ -9,7 +9,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-gray-800/80 backdrop-blur-sm shadow-sm z-50 hidden lg:block">
+    <nav className="fixed w-full bg-gray-800/80 backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-full mx-4 px-6 sm:px-2 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -28,12 +28,12 @@ const Navigation = () => {
             >
               Projects
             </button>
-            <button 
+            {/* <button 
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white"
             >
               Contact
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

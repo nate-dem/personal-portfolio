@@ -3,13 +3,48 @@ import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 import Navigation from '../components/Navigation';
 
 const Portfolio = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className="h-screen overflow-y-auto">
       {/* Nav bar used for automatic scrolling */}
-      <Navigation />
+      {/* <Navigation /> */}
+      <nav className="fixed w-full bg-gray-800/80 backdrop-blur-sm shadow-sm z-50">
+        <div className="max-w-full mx-4 px-6 sm:px-2 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <button onClick={() => scrollToSection('landingPage')} className="text-xl font-bold font-mono bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text">Nate Demchak</button>
+            </div>
+            <div className="flex flex-1 items-center font-mono justify-end space-x-4">
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white"
+              >
+                Projects
+              </button>
+              {/* <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white"
+              >
+                Contact
+              </button> */}
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Landing Page */}
-      <section id="landingPage" className="h-screen flex flex-col items-center bg-gray-800 px-4">
+      <section id="landingPage" className="min-h-screen flex flex-col items-center bg-gray-800 px-4">
         <div className="flex flex-col items-center justify-center flex-grow mt-40 space-y-8">
           <div className="text-center font-mono">
             <p className="text-lg mb-4 text-gray-300">
@@ -51,12 +86,11 @@ const Portfolio = () => {
           </h1>
         </footer>
       </section>
+      
       {/* About Me */}
-      <section id="about" className='h-screen bg-gray-800 '>
-        <div className='grid grid-rows-[20fr,80fr] grid-cols-[60fr,40fr] h-full'>
-          <div></div>
-          <div></div>
-          <div className='flex items-start justify-center px-12'>
+      <section id="about" className='min-h-screen bg-gray-800 py-24'>
+        <div className='grid grid-cols-[55fr,45fr] gap-4 h-full'>
+          <div className='flex items-center justify-center px-12'>
             <div className='flex flex-col items-start justify-center space-y-10 text-gray-300'>
               <h1 className='text-3xl font-mono'>
                 About Me:
@@ -75,18 +109,19 @@ const Portfolio = () => {
               </p>
             </div>      
           </div>
-          <div className="flex items-start justify-center px-12 mt-20">
-            <div className="w-128 h-144 rounded-xl overflow-hidden">
+          <div className="flex items-center justify-center px-12">
+            <div className="w-full rounded-xl overflow-hidden" style={{ maxHeight: '80vh' }}>
               <img 
-                src="../components/about_me_img.png" 
+                src="../components/about_me_update.png" 
                 alt="Nate Demchak"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
         </div>
       </section>
-      <section id="projects" className='h-screen bg-gray-800'>
+      
+      <section id="projects" className='min-h-screen bg-gray-800'>
         <div className='grid grid-cols-[33fr,33fr,34fr] gap-4 h-full'>
           <div className='flex justify-center items-start mt-40'>
           </div>
