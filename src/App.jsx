@@ -1,6 +1,5 @@
 import React from 'react';
-import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
-import Navigation from '../components/Navigation';
+import { LuGithub, LuLinkedin, LuMail, LuBookOpen } from "react-icons/lu";
 
 const Portfolio = () => {
   const scrollToSection = (sectionId) => {
@@ -32,12 +31,12 @@ const Portfolio = () => {
               >
                 Projects
               </button>
-              {/* <button 
+              <button 
                 onClick={() => scrollToSection('contact')}
                 className="bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text hover:text-white"
               >
                 Contact
-              </button> */}
+              </button>
             </div>
           </div>
         </div>
@@ -92,11 +91,11 @@ const Portfolio = () => {
         <div className='grid grid-cols-[55fr,45fr] gap-4 h-full'>
           <div className='flex items-center justify-center px-12'>
             <div className='flex flex-col items-start justify-center space-y-10 text-gray-300'>
-              <h1 className='text-3xl font-mono'>
+              <h1 className='text-3xl font-mono bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text'>
                 About Me:
               </h1>
               <p className='text-xl'>
-                After graduating high school in 2021, I began my journey at CUNY Macaulay Honors College at Baruch, focusing on biology and computer science. During my time there, I was fortunate to explore diverse interests and experiences:
+                After graduating high school in 2021, I began my journey at CUNY Macaulay Honors College at Baruch, focusing on biology and computer science. During my time there, I explored diverse interests:
               </p>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-lg">Served as an EMT responding to emergency calls across Long Island, Manhattan, and the Bronx.</li>
@@ -121,13 +120,108 @@ const Portfolio = () => {
         </div>
       </section>
       
-      <section id="projects" className='min-h-screen bg-gray-800'>
-        <div className='grid grid-cols-[33fr,33fr,34fr] gap-4 h-full'>
-          <div className='flex justify-center items-start mt-40'>
+      <section id="projects" className="min-h-screen bg-gray-800">
+        <div className="flex flex-col h-full text-gray-300">
+          <div className="flex flex-col gap-8 justify-center items-center mt-20">
+            <div className="w-full max-w-4xl px-6 space-y-8">
+              <a 
+                href="https://arxiv.org/pdf/2409.11149v1" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-gray-900/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <LuBookOpen className="text-green-400" size={20} />
+                          <span className="text-sm font-mono text-green-400">PUBLICATION • COLING 2025</span>
+                        </div>
+                        <h2 className="text-2xl font-bold mb-3 group-hover:bg-gradient-to-r from-green-400 to-cyan-500 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300">
+                          SAGED: A Holistic Bias-Benchmarking Pipeline for Language Models with Customisable Fairness Calibration
+                        </h2>
+                        <div className='flex flex-col space-y-4'>
+                          <p>
+                            Xin Guan, <strong>Nathaniel Demchak</strong>, Saloni Gupta, Ze Wang, Ediz Ertekin Jr., Adriano Koshiyama, Emre Kazim, Zekun Wu (2024). "SAGED: A Holistic Bias-Benchmarking Pipeline for Language Models with Customisable Fairness Calibration." Accepted to COLING 2025. 
+                          </p>
+                          <p>
+                            This paper presents a novel bias benchmarking pipeline for bias detection in large language models.
+                          </p>
+                          <span className="font-mono space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">View on arXiv</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a 
+                href="https://github.com/nate-dem/rare-pa-backend" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-gray-900/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <LuBookOpen className="text-green-400" size={20} />
+                          <span className="text-sm font-mono text-green-400">PROJECT • STANFORD MEDICINE/PALO ALTO VA</span>
+                        </div>
+                        <h2 className="text-2xl font-bold mb-3 group-hover:bg-gradient-to-r from-green-400 to-cyan-500 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300">
+                          Healthcare Wearables with AR Tools for Psychiatric Assessments
+                        </h2>
+                        <div className='flex flex-col space-y-4'>
+                          <p>
+                            This ongoing project allows psychiatrists to observe a patient's vitals in real-time using healthcare wearables and augmented reality tools.
+                          </p>
+                          <span className="font-mono space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">View Project</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a 
+                href="https://arxiv.org/pdf/2410.11059v1" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-gray-900/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <LuBookOpen className="text-green-400" size={20} />
+                          <span className="text-sm font-mono text-green-400">PUBLICATION • EVALEVAL AT NEURIPS 2024</span>
+                        </div>
+                        <h2 className="text-2xl font-bold mb-3 group-hover:bg-gradient-to-r from-green-400 to-cyan-500 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300">
+                          Assessing Bias in Metric Models for LLM Open-Ended Generation Bias Benchmarks
+                        </h2>
+                        <div className='flex flex-col space-y-4'>
+                          <p>
+                            <strong>Nathaniel Demchak</strong>, Xin Guan, Zekun Wu, Ziyi Xu, Adriano Koshiyama, Emre Kazim (2024). "Assessing Bias in Metric Models for LLM Open-Ended Generation Bias Benchmarks." Accepted to EVALEVAL at NeurIPS 2024.
+                          </p>
+                          <p>
+                            This paper assesses biases in classifier models used to evaluate bias in large language models.
+                          </p>
+                          <span className="font-mono space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">View on arXiv</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-          <div></div>
-          <div></div>
         </div>
+      </section>
+      <section id="contact" className='min-h-screen bg-gray-800'>
+
       </section>
     </div>
   );
