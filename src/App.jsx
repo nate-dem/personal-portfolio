@@ -10,7 +10,7 @@ const Portfolio = () => {
   };
   return (
     <div className="h-screen overflow-y-auto">
-      {/* Nav bar used for automatic scrolling */}
+
       {/* <Navigation /> */}
       <nav className="fixed w-full bg-gray-800/80 backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-full mx-4 px-6 sm:px-2 lg:px-8">
@@ -111,7 +111,7 @@ const Portfolio = () => {
           <div className="flex items-center justify-center px-12">
             <div className="w-full rounded-xl overflow-hidden" style={{ maxHeight: '80vh' }}>
               <img 
-                src="../components/about_me_update.png" 
+                src="../src/assets/about_me_update.png" 
                 alt="Nate Demchak"
                 className="w-full h-full object-contain"
               />
