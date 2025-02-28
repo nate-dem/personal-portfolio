@@ -72,8 +72,11 @@ const Portfolio = () => {
               <a href="https://www.linkedin.com/in/nathaniel-demchak-4340b326b/" className="text-white/80 hover:text-cyan-300 transition-colors">
                 <LuLinkedin size={28} />
               </a>
-              <a href="mailto:natedemchak35@gmail.com" className="text-white/80 hover:text-cyan-300 transition-colors">
-                <LuMail size={28} />
+              <a href="mailto:natedem@stanford.edu" className="text-white/80 hover:text-cyan-300 transition-colors">
+                <LuMail size={28} onClick={() => {
+                  navigator.clipboard.writeText('natedem@stanford.edu');
+                  alert('Email copied to clipboard!');
+                }}/>
               </a>
             </div>
           </div>
@@ -220,8 +223,22 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className='min-h-screen bg-gray-800'>
-
+      <section id="contact" className='min-h-screen bg-gray-800 grid grid-rows-[10fr,50fr,40fr]'>
+        <div></div>
+        <div className='flex flex-col justify-center items-center gap-4 space-y-6'>
+          <h1 className='text-4xl bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text'>
+            Let's Work Together!
+          </h1>
+          <div className='border border-gray-400 rounded-md px-4 py-2 hover:border-cyan-400 transition-colors'>
+            <p className='cursor-pointer text-xl text-gray-300 hover:text-cyan-400' onClick={() => {
+                navigator.clipboard.writeText('natedem@stanford.edu');
+                alert('Email copied to clipboard!');
+              }}>
+              Natedem@stanford.edu
+            </p>
+          </div>
+        </div>
+        <div></div>
       </section>
     </div>
   );
