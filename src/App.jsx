@@ -223,14 +223,13 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      <section id="contact" className='min-h-screen bg-gray-800 grid grid-rows-[10fr,50fr,40fr]'>
-        <div></div>
+      <section id="contact" className='min-h-screen bg-gray-800 grid grid-rows-[70fr,30fr]'>
         <div className='flex flex-col justify-center items-center gap-4 space-y-6'>
-          <h1 className='text-4xl bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text'>
+          <h1 className='text-8xl pb-4 bg-gradient-to-br from-green-400 to-cyan-500 text-transparent bg-clip-text'>
             Let's Work Together!
           </h1>
-          <div className='border border-gray-400 rounded-md px-4 py-2 hover:border-cyan-400 transition-colors'>
-            <p className='cursor-pointer text-xl text-gray-300 hover:text-cyan-400' onClick={() => {
+          <div className='border border-gray-400 rounded-lg px-6 py-4 hover:border-cyan-400 transition-colors'>
+            <p className='cursor-pointer text-2xl text-gray-300 hover:text-cyan-400' onClick={() => {
                 navigator.clipboard.writeText('natedem@stanford.edu');
                 alert('Email copied to clipboard!');
               }}>
