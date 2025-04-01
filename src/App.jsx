@@ -1,5 +1,6 @@
 import React from 'react';
 import { LuGithub, LuLinkedin, LuMail, LuBookOpen } from "react-icons/lu";
+import aboutMeImage from './src/assets/about_me_update.png';
 
 const Portfolio = () => {
   const scrollToSection = (sectionId) => {
@@ -114,7 +115,7 @@ const Portfolio = () => {
           <div className="flex items-center justify-center px-12">
             <div className="w-full rounded-xl overflow-hidden" style={{ maxHeight: '80vh' }}>
               <img 
-                src="../src/assets/about_me_update.png" 
+                src={aboutMeImage}
                 alt="Nate Demchak"
                 className="w-full h-full object-contain"
               />
