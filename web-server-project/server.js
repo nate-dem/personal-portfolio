@@ -3,9 +3,22 @@ import handleRequest from './handleRequest.js';
 
 const server = net.createServer(socket => {
   socket.on("data", data => {
-    const response = handleRequest(data);
-    socket.write(response);
-    socket.end();
+    try {
+      const response = handleRequest(data);
+      socket.write(response, err => {
+        if (err) {
+          console.error("Socket write error:", err.message);
+        }
+        socket.end();
+      });
+    } catch (err) {
+      console.error("Error handling request:", err.message);
+      socket.end();
+    }
+  });
+
+  socket.on("error", err => {
+    console.error("Socket error:", err.message);
   });
 });
 

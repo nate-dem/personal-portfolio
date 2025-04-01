@@ -32,7 +32,7 @@ function routerResponse(request) {
       statusCode: 200,
       statusMessage: 'OK',
       headers: { 'Content-Type': contentType },
-      body: data.toString()
+      body: data
     };
   } catch (err) {
     return {
