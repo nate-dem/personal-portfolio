@@ -1,6 +1,6 @@
 import React from 'react';
 import { LuGithub, LuLinkedin, LuMail, LuBookOpen } from "react-icons/lu";
-import aboutMeImage from './src/assets/about_me_update.png';
+import aboutMeImage from './assets/about_me_update.png';
 
 const Portfolio = () => {
   const scrollToSection = (sectionId) => {
